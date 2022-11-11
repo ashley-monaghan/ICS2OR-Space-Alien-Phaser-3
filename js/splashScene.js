@@ -44,7 +44,7 @@ class SplashScene extends Phaser.Scene {
     // pass
   }
 
-/** 
+  /** 
   * Should be overridden by your own Scenes.
   * This method is called once per game step while the scene is running.
   * @param {number} time - The current time.
