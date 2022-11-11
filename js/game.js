@@ -39,7 +39,7 @@ const game = new Phaser.Game(config)
 
 // load scene
 // Note: rember any "key" is gobal and CAN NOT be reused
-game.scene.add("splashScene")
+game.scene.add("splashScene", splashScene)
 
 // the start scene
 game.scene.start("splashScene")
