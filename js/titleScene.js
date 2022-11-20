@@ -4,22 +4,22 @@
 //
 // Created by: Ashley Monaghan
 // Created on: Nov 2022
-// This us the Splash Scene
+// This is the Title Scene
 
 /**
-* Thus class is the Splash Scene
+* This class is the Title Scene
 */
-class SplashScene extends Phaser.Scene {
+class TitleScene extends Phaser.Scene {
   /**
   * This method is the constructor.
   */
   constructor() {
-    super({ key: "splashScene" })
+    super({ key: "titleScene" })
   }
 
-  /**
+/**
   * Can be defined on your own Scene
-  *This methos is called by the Scene Manager when the scene starts,
+  *This method is called by the Scene Manager when the scene starts,
   *  before preload() and create().
   * 0param {object} data - Any data passed via ScenePlugin.add() or ScenePlugin.start().
   */
@@ -32,7 +32,7 @@ class SplashScene extends Phaser.Scene {
   * Use it to load assests
   */
   preload() {
-    console.log("Splash Scene")
+    console.log("Title Scene")
   }
 
   /**
@@ -55,4 +55,4 @@ class SplashScene extends Phaser.Scene {
   }
 }
 
-export default SplashScene
+export default TitleScene
