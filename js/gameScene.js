@@ -9,15 +9,12 @@
 /**
 * Thus class is the Splash Scene
 */
-class MenuScene extends Phaser.Scene {
+class SplashScene extends Phaser.Scene {
   /**
   * This method is the constructor.
   */
   constructor() {
-    super({ key: "menuScene" })
-
-    this.menuSceneBackgroundImage = null
-    this.startButton = null
+    super({ key: "gameScene" })
   }
 
   /**
@@ -27,7 +24,7 @@ class MenuScene extends Phaser.Scene {
   * 0param {object} data - Any data passed via ScenePlugin.add() or ScenePlugin.start().
   */
   init(data) {
-    this.cameras.main.setBackgroundColor("A020F0")
+    this.cameras.main.setBackgroundColor("FFA500") 
   }
 
   /**
@@ -35,9 +32,7 @@ class MenuScene extends Phaser.Scene {
   * Use it to load assests
   */
   preload() {
-    console.log("Menu Scene")
-    this.load.image("menuSceneBackground", "./assets/aliens_screen_image2.jpg")
-    this.load.image("startButton", "./assets/start.png")
+    console.log("Game Scene")
   }
 
   /**
@@ -46,13 +41,7 @@ class MenuScene extends Phaser.Scene {
   * 0param {object} data - Any data passed via ScenePlugin.add() or ScenePlugin.start().
   */
   create(data) {
-    this.menuSceneBackgroundImage = this.add.sprite(0, 0, menuSceneBackground)
-    this.titleSceneBackgroundImage.x = 1920 / 2
-    this.titleSceneBackgroundImage.y = 1080 / 2
-
-    this.startButton = this.add.sprite(1920 / 2, 1080 / 2 + 100, "startButton")
-    this.startButton.setInteractive({ useHandCursor: true })
-    this.startButton.on("pointerdown", () => this.clickButton)
+  //pass
   }
 
   /** 
@@ -62,12 +51,8 @@ class MenuScene extends Phaser.Scene {
   * @param {number} delta - The delta time in ms since the last frame.
   */
   update(time, delta) {
-    //pass
-  }
-
-  clickButton() {
-    this.scene.start("gameScene")
+  //pass
   }
 }
 
-export default MenuScene
+export default SplashScene
