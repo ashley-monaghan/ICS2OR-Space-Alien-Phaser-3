@@ -4,12 +4,12 @@
 //
 // Created by: Ashley Monaghan
 // Created on: Nov 2022
-// This us the Splash Scene
+// This us the Game Scene
 
 /**
 * Thus class is the Splash Scene
 */
-class SplashScene extends Phaser.Scene {
+class GameScene extends Phaser.Scene {
   /**
   * This method is the constructor.
   */
@@ -55,4 +55,4 @@ class SplashScene extends Phaser.Scene {
   }
 }
 
-export default SplashScene
+export default GameScene

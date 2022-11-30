@@ -45,7 +45,7 @@ class MenuScene extends Phaser.Scene {
   * Use it to create your game objects
   * 0param {object} data - Any data passed via ScenePlugin.add() or ScenePlugin.start().
   */
-  create(data) {
+  create (data) {
     this.menuSceneBackgroundImage = this.add.sprite(0, 0, menuSceneBackground)
     this.titleSceneBackgroundImage.x = 1920 / 2
     this.titleSceneBackgroundImage.y = 1080 / 2
