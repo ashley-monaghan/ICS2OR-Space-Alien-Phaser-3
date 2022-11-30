@@ -6,50 +6,32 @@
 // Created on: Nov 2022
 // This us the Game Scene
 
-/**
-* Thus class is the Splash Scene
-*/
 class GameScene extends Phaser.Scene {
-  /**
-  * This method is the constructor.
-  */
   constructor() {
     super({ key: "gameScene" })
+
+    this.background = null
+    this.ship = null
   }
 
-  /**
-  * Can be defined on your own Scene
-  *This methos is called by the Scene Manager when the scene starts,
-  *  before preload() and create().
-  * 0param {object} data - Any data passed via ScenePlugin.add() or ScenePlugin.start().
-  */
   init(data) {
     this.cameras.main.setBackgroundColor("FFA500") 
   }
 
-  /**
-  * Can be defined on your own Scenes.
-  * Use it to load assests
-  */
   preload() {
     console.log("Game Scene")
+
+    this.load.image("starBackground", "./assets/starBackground.png")
+    this.load.image("ship", "./assets/spaceShip.png")
   }
 
-  /**
-  * Can be defined on your own Scenes.
-  * Use it to create your game objects
-  * 0param {object} data - Any data passed via ScenePlugin.add() or ScenePlugin.start().
-  */
   create(data) {
-  //pass
+    this.background = this.add.image(0, 0, "starBackground").setScale(2.0)
+    this.background.setOrigin(0, 0)
+
+    this.ship = this.physics.add.spirte(1920 / 2, 1080 - 100, "ship")
   }
 
-  /** 
-  * Should be overridden by your own Scenes.
-  * This method is called once per game step while the scene is running.
-  * @param {number} time - The current time.
-  * @param {number} delta - The delta time in ms since the last frame.
-  */
   update(time, delta) {
   //pass
   }
