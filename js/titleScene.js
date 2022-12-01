@@ -1,3 +1,12 @@
+/* global Phaser */
+
+// Copyright (c) 2022 Ashley Monaghan all rights reserved
+//
+// Created by: Ashley Monaghan
+// Created on: Nov 2022
+// This is the Title Scene
+
+
 class TitleScene extends Phaser.Scene {
   constructor() {
     super({ key: "titleScene" })
