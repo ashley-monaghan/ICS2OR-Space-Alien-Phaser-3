@@ -15,7 +15,7 @@ class GameScene extends Phaser.Scene {
   }
 
   init(data) {
-    this.cameras.main.setBackgroundColor("FFA500") 
+    this.cameras.main.setBackgroundColor("000000") 
   }
 
   preload() {
@@ -32,8 +32,29 @@ class GameScene extends Phaser.Scene {
     this.ship = this.physics.add.sprite(1920 / 2, 1080 - 100, "ship")
   }
 
+  /**
+   * Should be overridden by your own Scenes.
+   * This method is called once per game step while the scene is running.
+   *  @param {number} time - The current time.
+   *  @param {number} delta - The delta time in ms since the last frame.
+   */
   update(time, delta) {
-  //pass
+    const keyLeftObj = this.input.keyboard.addKey("LEFT")
+    const keyRightObj = this.input.keyboard.addKey("RIGHT")
+
+    if (keyLeftObj.isDown === true) {
+      this.ship.x -= 15
+      if (this.ship.x < 0) {
+        this.ship.x = 0
+      }
+    }
+
+    if (keyRightObj.isDown === true) {
+      this.ship.x += 15
+      if (this.ship.x > 1920) {
+        this.ship.x = 1920
+      }
+    }
   }
 }
 
